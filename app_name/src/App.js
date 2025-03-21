@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { FirstQuestion } from "./FirstQuestion";
+import FirstQuestion from "./FirstQuestion";
 
 function App() {
 

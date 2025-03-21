@@ -7,20 +7,25 @@ const FirstQuestion = () => {
     const [data, setData] = useState(names);
     const [searchTerm, setSearchTerm] = useState("");
     
-    const handleChange = (name: string) => {
-        setSearchTerm(name);
+    const handleChange = (e) => {
+        setSearchTerm(e.target.value);
+        console.log(searchTerm);
     }
+
+    const namesFiltered = data.filter((person) => 
+        person.includes(searchTerm)
+    );
     
     return (
         <div>
             <input 
                 type="text"
                 placeholder="Search here"
-                onChange={(name: string) => handleChange(name)} 
+                onChange={handleChange} 
             />
                 
-            {data.map((name) => {
-                return <p>{name}</p>;
+            {namesFiltered.map((person) => {
+                return <p>{person}</p>;
             })}
         </div>
     )
