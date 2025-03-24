@@ -1,4 +1,4 @@
-import React, { use } from "react";
+import React, { use, useEffect } from "react";
 import { useState } from "react";
 
 const TodoList = () => {
@@ -24,6 +24,7 @@ const TodoList = () => {
             {todos.map((todo, index) => (
                 <li ket={index}>{todo}</li>
             ))}
+
         </div>
     )
 }
